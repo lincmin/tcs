@@ -60,7 +60,26 @@ module.exports = {
       //设置 less 文件的处理
       {
         test: /\.less$/,
-        use: ['style-loader', 'css-loader', 'less-loader']
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      browsers: 'last 2 versions'
+                    }
+                  ]
+                ]
+              }
+            }
+          },
+          'less-loader'
+        ]
       }
     ]
   },
