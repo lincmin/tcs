@@ -13,7 +13,8 @@ module.exports = {
     filename: 'bundle.js',
     //配置打包环境,高速webpack不适用箭头函数
     environment: {
-      arrowFunction: false
+      arrowFunction: false,
+      const: false
     }
   },
   //指定webpack打包时使用模块
