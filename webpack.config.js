@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     //打包后文件的名字
     filename: 'bundle.js',
-    //配置打包环境,高速webpack不适用箭头函数
+    //配置打包环境,告诉webpack不适用箭头函数
     environment: {
       arrowFunction: false,
       const: false
